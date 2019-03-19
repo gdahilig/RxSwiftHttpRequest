@@ -2,8 +2,9 @@
 Simple http request done using RxSwift/RxCocoa
 
 
-Class: ViewController
-Method: performHttpRequest(address: String)
+ Class: ViewController
+ 
+ Method: performHttpRequest(address: String)
 
 1) Create an Observable that will emit either success or error.
 2) The Observables takes a closure that
