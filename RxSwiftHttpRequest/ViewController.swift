@@ -12,19 +12,40 @@ import RxCocoa
 
 class ViewController: UIViewController {
     private let bag = DisposeBag()
+    var pushNotificationSubject : ReplaySubject<PushInfo>?
     enum Errors: Error {
         case downloadFailed
     }
-
+    @IBOutlet weak var message: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        self.pushNotificationSubject = appDelegate.pushNotificationSubject
+        self.pushNotificationSubject?
+            .subscribe( onNext: { pushInfo in
+                let id: Int = pushInfo.transactionId
+                print("Transaction received: #\(id)")
+                })
+            .disposed(by: bag)
+        // clear the message area
+        self.message.text = ""
     }
 
     func showMessage(_ title: String, description: String? = nil) {
         alert(title: title, text: description)
             .subscribe()
             .disposed(by: bag)
+    }
+    
+    @IBAction func createTransaction(_ sender: Any) {
+        let id = Date().toSeconds()
+        
+        pushNotificationSubject?.onNext(PushInfo(transactionId: id!))
+        
+        let msg = "Transaction #\(id ?? 0) created!"
+        self.message.text = msg
     }
     
     @IBAction func pressDownload(_ sender: Any) {
@@ -42,7 +63,7 @@ class ViewController: UIViewController {
      Method: performHttpRequest(address: String)
      But it merely performs a simple request.
      
-     1) Create an Observable that will emit either success or error.
+     1) Create an Observable that emits either success or error.
      2) The Observables takes a closure that
         a) creates url from the address
         b) creates URL session
@@ -98,3 +119,5 @@ extension UIViewController {
         }
     }
 }
+
+

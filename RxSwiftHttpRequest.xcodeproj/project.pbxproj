@@ -15,6 +15,7 @@
 		13C84F18223D4B9B004D6FCF /* RxSwiftHttpRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C84F17223D4B9B004D6FCF /* RxSwiftHttpRequestTests.swift */; };
 		13C84F23223D4B9B004D6FCF /* RxSwiftHttpRequestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C84F22223D4B9B004D6FCF /* RxSwiftHttpRequestUITests.swift */; };
 		13C84F33223DA5FE004D6FCF /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 13C84F32223DA5FD004D6FCF /* Podfile */; };
+		13C84F372246D299004D6FCF /* Date+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13C84F362246D299004D6FCF /* Date+Tools.swift */; };
 		910D4767E7CA53200DCA901D /* Pods_RxSwiftHttpRequest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 159C45DF7ADEF7C3A7EE4F1C /* Pods_RxSwiftHttpRequest.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,7 +50,8 @@
 		13C84F1E223D4B9B004D6FCF /* RxSwiftHttpRequestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxSwiftHttpRequestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		13C84F22223D4B9B004D6FCF /* RxSwiftHttpRequestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftHttpRequestUITests.swift; sourceTree = "<group>"; };
 		13C84F24223D4B9B004D6FCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		13C84F32223DA5FD004D6FCF /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
+		13C84F32223DA5FD004D6FCF /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		13C84F362246D299004D6FCF /* Date+Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Tools.swift"; sourceTree = "<group>"; };
 		159C45DF7ADEF7C3A7EE4F1C /* Pods_RxSwiftHttpRequest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxSwiftHttpRequest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		18F764D658E3EFD251EDAF2C /* Pods-RxSwiftHttpRequest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftHttpRequest.debug.xcconfig"; path = "Target Support Files/Pods-RxSwiftHttpRequest/Pods-RxSwiftHttpRequest.debug.xcconfig"; sourceTree = "<group>"; };
 		56F78C9AA39B46A6D00C0470 /* Pods-RxSwiftHttpRequest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxSwiftHttpRequest.release.xcconfig"; path = "Target Support Files/Pods-RxSwiftHttpRequest/Pods-RxSwiftHttpRequest.release.xcconfig"; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				13C84F02223D4B98004D6FCF /* AppDelegate.swift */,
 				13C84F04223D4B98004D6FCF /* ViewController.swift */,
 				13C84F06223D4B98004D6FCF /* Main.storyboard */,
+				13C84F362246D299004D6FCF /* Date+Tools.swift */,
 				13C84F09223D4B9A004D6FCF /* Assets.xcassets */,
 				13C84F0B223D4B9A004D6FCF /* LaunchScreen.storyboard */,
 				13C84F0E223D4B9B004D6FCF /* Info.plist */,
@@ -149,7 +152,6 @@
 				18F764D658E3EFD251EDAF2C /* Pods-RxSwiftHttpRequest.debug.xcconfig */,
 				56F78C9AA39B46A6D00C0470 /* Pods-RxSwiftHttpRequest.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -340,6 +342,7 @@
 			files = (
 				13C84F05223D4B98004D6FCF /* ViewController.swift in Sources */,
 				13C84F03223D4B98004D6FCF /* AppDelegate.swift in Sources */,
+				13C84F372246D299004D6FCF /* Date+Tools.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

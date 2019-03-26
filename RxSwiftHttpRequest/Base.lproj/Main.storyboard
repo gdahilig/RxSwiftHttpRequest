@@ -25,22 +25,43 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="en1-7Z-6yZ">
-                                <rect key="frame" x="153" y="272" width="69" height="30"/>
+                                <rect key="frame" x="153" y="220" width="69" height="30"/>
                                 <state key="normal" title="Download"/>
                                 <connections>
                                     <action selector="pressDownload:" destination="BYZ-38-t0r" eventType="touchUpInside" id="flC-ft-Z3Z"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGE-et-NHa">
+                                <rect key="frame" x="122.5" y="313" width="130" height="30"/>
+                                <state key="normal" title="Create Transaction"/>
+                                <connections>
+                                    <action selector="createTransaction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JbR-HZ-Z3C"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5yP-ie-mhQ">
+                                <rect key="frame" x="0.0" y="351" width="375" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="en1-7Z-6yZ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="8ru-U4-Bzj"/>
+                            <constraint firstItem="5yP-ie-mhQ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Dhm-Fb-Rl3"/>
+                            <constraint firstItem="5yP-ie-mhQ" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="RjO-bA-OC5"/>
                             <constraint firstItem="hVJ-u4-cry" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="f7H-db-jX8"/>
+                            <constraint firstItem="gGE-et-NHa" firstAttribute="top" secondItem="en1-7Z-6yZ" secondAttribute="bottom" constant="63" id="gzY-jM-DxJ"/>
                             <constraint firstItem="hVJ-u4-cry" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="121" id="j31-fl-z0s"/>
-                            <constraint firstItem="en1-7Z-6yZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="252" id="wVK-sf-c8H"/>
+                            <constraint firstItem="en1-7Z-6yZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="wVK-sf-c8H"/>
+                            <constraint firstItem="gGE-et-NHa" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="wok-AF-zhn"/>
+                            <constraint firstItem="5yP-ie-mhQ" firstAttribute="top" secondItem="gGE-et-NHa" secondAttribute="bottom" constant="8" id="yVh-QH-ttD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="message" destination="5yP-ie-mhQ" id="hiL-ov-Gtr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
