@@ -1,5 +1,5 @@
 # RxSwiftHttpRequest
-Simple http request done using RxSwift/RxCocoa
+Simple http request using RxSwift/RxCocoa
 
 
  Class: ViewController
